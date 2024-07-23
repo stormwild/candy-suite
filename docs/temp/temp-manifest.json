@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Candy Suite v1",
+  "version": "1.0.0",
+  "description": "A suite of page tools. Copy page title as a markdown link",
+  "permissions": ["clipboardWrite", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

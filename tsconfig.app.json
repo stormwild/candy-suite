@@ -23,5 +23,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src", "docs/temp/popup.ts", "docs/content.ts"],
+  "baseUrl": ".",
+  "paths": {
+    "@components/*": ["src/components/*"],
+    "@assets/*": ["src/assets/*"],
+    "@utils/*": ["src/utils/*"]
+  }
 }

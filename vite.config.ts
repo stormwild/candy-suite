@@ -8,7 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: './index.html',
-        content: './src/content.ts',
+        // content: './src/content.ts',
       },
     },
   },

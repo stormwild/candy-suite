@@ -1,11 +1,11 @@
 import { useTheme } from '@emotion/react'
 import { Brightness4, Brightness7 } from '@mui/icons-material'
-import { IconButton } from '@mui/material'
+import { IconButton, Theme } from '@mui/material'
 import { useContext } from 'react'
 import ColorModeContext from '../color-mode-context'
 
 const ThemeToggle = () => {
-  const theme = useTheme()
+  const theme = useTheme() as Theme
   const colorMode = useContext(ColorModeContext)
 
   return (

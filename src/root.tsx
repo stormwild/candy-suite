@@ -39,6 +39,8 @@ export const Root = () => {
     [mode]
   )
 
+  console.log('theme.palette.mode', theme.palette.mode)
+
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>

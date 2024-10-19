@@ -19,12 +19,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.9.0' # Specify the Node.js version you need
+          node-version: '22.10.0' # Specify the Node.js version you need
       - name: Check Node Version
         run: node -v
 
       - name: Install pnpm
-        run: npm install -g pnpm@22.10.0
+        run: npm install -g pnpm@latest
 
       - name: Install dependencies
         run: pnpm install

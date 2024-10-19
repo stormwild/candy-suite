@@ -78,3 +78,5 @@ jobs:
           asset_path: ./dist.zip
           asset_name: dist.zip
           asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}

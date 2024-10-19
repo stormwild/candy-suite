@@ -44,25 +44,26 @@ jobs:
     name: Release
     needs: build
     runs-on: ubuntu-latest
+
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/feature/use-mui'
 
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: production-files
-          path: ./dist
+          pattern: dist*
+          path: ./release
 
       - name: Create GitHub Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: actions/create-release@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
+          # draft: false
+          prerelease: true
 
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1

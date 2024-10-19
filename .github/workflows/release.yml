@@ -51,7 +51,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: production-files
-          path: ./release
+          path: ./dist
 
       - name: Create GitHub Release
         id: create_release

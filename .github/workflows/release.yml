@@ -55,6 +55,12 @@ jobs:
           pattern: dist*
           path: ./release
 
+      - name: Create Tag
+        run: git tag -a v0.0.1 -m "Release v0.0.1"
+
+      - name: Push Tag
+        run: git push origin v0.0.1
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:

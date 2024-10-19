@@ -20,6 +20,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22.9.0' # Specify the Node.js version you need
+      - name: Check Node Version
+        run: node -v
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -28,7 +30,7 @@ jobs:
         run: pnpm install
 
       - name: Build the project
-        run: pnpm run build
+        run: pnpm build
 
       - name: Zip dist folder
         run: zip -r dist.zip dist

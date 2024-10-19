@@ -1,6 +1,9 @@
 name: Build and Release
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     tags:
       - 'v*.*.*' # Triggers the workflow on version tags like v1.0.0

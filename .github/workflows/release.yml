@@ -6,9 +6,14 @@ on:
   #     - main
   push:
     branches:
-      - feature/use-mui
+      - main
+      - feature/*
     tags:
       - 'v*.*.*' # Triggers the workflow on version tags like v1.0.0
+
+permissions:
+  contents: write
+  actions: read
 
 jobs:
   build:

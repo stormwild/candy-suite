@@ -10,6 +10,11 @@ export default defineConfig({
         index: './index.html',
         content: './src/content.ts',
       },
+      output: {
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
+      },
     },
   },
 })

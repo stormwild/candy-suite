@@ -68,7 +68,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
 
       - name: Compress dist directory
-        run: zip -r dist.zip dist
+        run: |
+          cd dist
+          zip -r ../dist.zip .
 
       # Upload the zip file to the release
       - name: Upload build output to release

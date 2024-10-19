@@ -24,7 +24,7 @@ jobs:
         run: node -v
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: npm install -g pnpm@22.10.0
 
       - name: Install dependencies
         run: pnpm install

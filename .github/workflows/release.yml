@@ -46,11 +46,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Create release
+        run: mkdir -p ./release
+
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
           pattern: dist*
-          path: /
+          path: ./release
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1

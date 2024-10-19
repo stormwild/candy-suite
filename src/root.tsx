@@ -1,4 +1,3 @@
-import App from './app.tsx'
 import {
   createTheme,
   CssBaseline,
@@ -7,6 +6,7 @@ import {
 } from '@mui/material'
 import { useMemo, useState } from 'react'
 import { ColorModeContext } from './color-mode-context.tsx'
+import App from './app.tsx'
 
 type ColorMode = 'light' | 'dark'
 

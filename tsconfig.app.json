@@ -23,13 +23,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "src",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "docs/temp/popup.ts",
-    "docs/content.ts"
-  ],
+  "include": ["src", "src/**/*.ts", "src/**/*.tsx"],
   "baseUrl": ".",
   "paths": {
     "@components/*": ["src/components/*"],

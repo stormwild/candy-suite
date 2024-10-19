@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import candySuiteLogo from '/candy-suite-logo.svg'
-import ThemeToggle from './components/theme-toggle'
 import { Box, SnackbarCloseReason, Typography } from '@mui/material'
 import { Snackbar, Alert } from '@mui/material'
+import ThemeToggle from './components/theme-toggle'
 
 type Message = { title: string; url: string }
 

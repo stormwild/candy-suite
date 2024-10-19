@@ -3,7 +3,13 @@
   "name": "Candy Suite v1",
   "version": "1.0.0",
   "description": "A suite of page tools. Copy page title as a markdown link",
-  "permissions": ["clipboardWrite", "activeTab"],
+  "permissions": ["tabs", "clipboardWrite", "activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
   "action": {
     "default_popup": "index.html",
     "default_icon": {

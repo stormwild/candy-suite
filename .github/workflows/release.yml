@@ -40,30 +40,3 @@ jobs:
         with:
           name: dist
           path: dist.zip
-
-  release:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Create release
-        run: mkdir -p ./release
-
-      - name: Download Artifact
-        uses: actions/download-artifact@v4
-        with:
-          pattern: dist*
-          path: ./release
-
-      - name: Create Tag
-        run: git tag -a v0.0.1 -m "Release v0.0.1"
-
-      - name: Push Tag
-        run: git push origin v0.0.1
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: dist.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

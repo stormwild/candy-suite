@@ -58,3 +58,5 @@ jobs:
           draft: false
           prerelease: false
           body: 'Release for ${{ env.tag_name }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.CANDY_SUITE_WORKFLOW_GITHUB_TOKEN }}

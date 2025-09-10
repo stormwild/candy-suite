@@ -24,7 +24,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.9",
     "typescript": "^5.5.4",
-    "vite": "^5.3.4"
+    "vite": "^5.4.20"
   },
   "packageManager": "pnpm@9.3.0+sha1.d4f1da7af76dbdb4ab1a08f6b5add602ffad6fd4"
 }
